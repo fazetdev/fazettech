@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Fazet Tech — Engineering & AI Consultation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --obsidian: #050505;
+      --obsidian-light: #0f0f0f;
+      --gold-matte: #d4af37;
+      --ai-blue: #3b82f6;
+      --border-gold: rgba(212, 175, 55, 0.15);
+      --text-main: #e0e0e0;
+      --text-muted: #a0a0a0;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--obsidian); color: var(--text-main); line-height: 1.6; }
+
+    nav { padding: 1.5rem 8%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-gold); }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: #fff; text-decoration: none; }
+    .nav-logo span { color: var(--gold-matte); }
+    .btn-back { color: var(--text-muted); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+
+    .hero { padding: 6rem 8% 4rem; text-align: center; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); color: #fff; line-height: 1.1; margin-bottom: 1.5rem; }
+    
+    .hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; padding: 2rem 8% 8rem; max-width: 1200px; margin: 0 auto; }
+    
+    .hub-card { background: var(--obsidian-light); border: 1px solid var(--border-gold); padding: 4rem 3rem; border-radius: 4px; text-align: center; transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1); text-decoration: none; position: relative; }
+    .hub-card:hover { transform: translateY(-10px); }
+    
+    /* Engineering Accent */
+    .card-eng:hover { border-color: var(--gold-matte); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.05); }
+    /* AI Accent */
+    .card-ai:hover { border-color: var(--ai-blue); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.05); }
+
+    .hub-card h2 { font-family: 'Syne', sans-serif; font-size: 2rem; color: #fff; margin-bottom: 1rem; }
+    .hub-card p { color: var(--text-muted); margin-bottom: 2.5rem; min-height: 80px; }
+    
+    .btn-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; display: inline-block; padding-bottom: 5px; border-bottom: 2px solid transparent; transition: 0.3s; }
+    .card-eng .btn-label { color: var(--gold-matte); border-color: var(--gold-matte); }
+    .card-ai .btn-label { color: var(--ai-blue); border-color: var(--ai-blue); }
+
+    footer { padding: 4rem 8%; text-align: center; font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border-gold); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">FAZET<span>.</span></a>
+    <a href="/" class="btn-back">← Back to Home</a>
+  </nav>
+
+  <header class="hero">
+    <span style="color: var(--gold-matte); font-weight: 700; letter-spacing: 4px; font-size: 0.7rem; text-transform: uppercase;">Our Expertise</span>
+    <h1>The Two Pillars of <br>Digital Evolution.</h1>
+  </header>
+
+  <main class="hub-grid">
+    
+    <a href="engineering.html" class="hub-card card-eng">
+      <span style="font-size: 0.6rem; color: var(--gold-matte); letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 1rem;">Core Pillar 01</span>
+      <h2>Custom <br>Engineering</h2>
+      <p>Building high-performance, type-safe infrastructure and full-stack web applications designed to scale.</p>
+      <span class="btn-label">View Infrastructure →</span>
+    </a>
+
+    <a href="ai-consultation.html" class="hub-card card-ai">
+      <span style="font-size: 0.6rem; color: var(--ai-blue); letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 1rem;">Core Pillar 02</span>
+      <h2>AI Strategy & <br>Consultation</h2>
+      <p>Bridging the gap between Large Language Models and your data. Context-aware RAG systems and automation.</p>
+      <span class="btn-label" style="color: var(--ai-blue); border-color: var(--ai-blue);">View Intelligence →</span>
+    </a>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Fazet Tech Ltd. — Engineering for the Next Decade.</p>
+  </footer>
+
+</body>
+</html>

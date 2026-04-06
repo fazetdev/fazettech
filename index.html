@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fazet Edutech Ltd — Software House & Digital Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      /* Obsidian & Gold Brand Palette */
+      --obsidian: #050505;
+      --obsidian-light: #0f0f0f;
+      --gold-glimmer: #f3cf7a;
+      --gold-matte: #d4af37;
+      --gold-deep: #927521;
+      --gold-gradient: linear-gradient(145deg, #f3cf7a 0%, #d4af37 50%, #927521 100%);
+      
+      --text-main: #e0e0e0;
+      --text-muted: #a0a0a0;
+      --border-gold: rgba(212, 175, 55, 0.2);
+      --glass-obsidian: rgba(15, 15, 15, 0.8);
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--obsidian);
+      color: var(--text-main);
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* ── CUSTOM CURSOR ── */
+    .cursor { width: 6px; height: 6px; background: var(--gold-glimmer); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); }
+    .cursor-ring { width: 32px; height: 32px; border: 1px solid var(--gold-matte); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: all 0.15s ease-out; }
+
+    /* ── NAVIGATION ── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 8%; display: flex; align-items: center; justify-content: space-between; transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    nav.scrolled { background: var(--glass-obsidian); backdrop-filter: blur(25px); padding: 1rem 8%; border-bottom: 1px solid var(--border-gold); }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.6rem; color: #fff; text-decoration: none; letter-spacing: -0.5px; }
+    .nav-logo span { color: var(--gold-matte); }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.85rem; font-weight: 500; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-links a:hover { color: var(--gold-glimmer); }
+
+    /* ── HERO ── */
+    .hero { min-height: 100vh; display: flex; align-items: center; padding: 0 8%; position: relative; overflow: hidden; background-image: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 40%); }
+    .hero-content { position: relative; z-index: 2; max-width: 900px; }
+    .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 7vw, 5.8rem); line-height: 0.95; color: #fff; margin-bottom: 1.5rem; font-weight: 800; }
+    .gold-shimmer { background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-sub { font-size: 1.2rem; color: var(--text-muted); max-width: 650px; line-height: 1.7; margin-bottom: 3rem; }
+
+    .btn-group { display: flex; gap: 1rem; }
+    .btn { padding: 1.1rem 2.5rem; border-radius: 2px; font-weight: 700; text-decoration: none; transition: 0.4s; font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; display: inline-block; }
+    .btn-primary { background: var(--gold-gradient); color: var(--obsidian); border: none; }
+    .btn-outline { border: 1px solid var(--border-gold); color: #fff; }
+    .btn-outline:hover { background: rgba(212, 175, 55, 0.05); color: var(--gold-glimmer); }
+
+    /* ── EXPERTISE ── */
+    .section { padding: 9rem 8%; }
+    .label { color: var(--gold-matte); font-weight: 700; font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1rem; display: block; }
+    .expertise-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 5rem; align-items: center; }
+    .exp-content h2 { font-family: 'Syne', sans-serif; font-size: 3rem; margin-bottom: 2rem; color: #fff; }
+    .exp-content p { font-size: 1.15rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; }
+
+    /* ── VERTICAL PRODUCTS ── */
+    .product-stack { display: flex; flex-direction: column; gap: 4rem; max-width: 1000px; margin: 0 auto; }
+    .product-card { background: #ffffff; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; transition: 0.5s; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+    .product-img { width: 100%; height: 450px; background: #f8fafc; position: relative; overflow: hidden; }
+    .product-img img { width: 100%; height: 100%; object-fit: cover; }
+    .product-info { padding: 3rem; }
+    .product-info h3 { font-family: 'Syne', sans-serif; font-size: 2.2rem; margin-bottom: 1rem; color: #0f172a; }
+    .product-info p { color: #475569; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem; max-width: 700px; }
+
+    /* ── FOOTER ── */
+    footer { padding: 5rem 8% 3rem; border-top: 1px solid var(--border-gold); background: #020202; }
+    .footer-flex { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 3rem; margin-bottom: 4rem; }
+    .footer-col h4 { font-family: 'Syne', sans-serif; margin-bottom: 1.5rem; color: #fff; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.8rem; }
+    .footer-col a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+    .footer-col a:hover { color: var(--gold-matte); }
+
+    @media (max-width: 968px) {
+      .nav-links { display: none; }
+      .expertise-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .product-img { height: 300px; }
+      .section { padding: 5rem 5%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+
+  <nav id="navbar">
+    <a href="/" class="nav-logo">FAZET<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
+      <li><a href="/team">Team</a></li>
+      <li><a href="https://wa.me/2347082921105">Contact</a></li>
+    </ul>
+    <a href="mailto:fazetedutechltd@gmail.com" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.7rem;">Hire Us</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <span class="label">Software Engineering Studio</span>
+      <h1>Build the <span class="gold-shimmer">Future</span> of Your Business.</h1>
+      <p class="hero-sub">We architect premium digital experiences and software solutions for high-growth businesses and institutions across Nigeria.</p>
+      <div class="btn-group">
+        <a href="https://wa.me/2347082921105" class="btn btn-primary">WhatsApp Demo</a>
+        <a href="#products" class="btn btn-outline">Explore Products</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise" class="section">
+    <div class="expertise-grid">
+      <div class="exp-content">
+        <span class="label">Our Approach</span>
+        <h2>Software built for real performance.</h2>
+        <p>We address the limitations of generic tools by developing tailored web applications, high-performance dashboards, and automated systems built around the specific needs of your business.</p>
+        <p style="font-size: 1rem;">Whether you are an individual founder or a large-scale institution, we turn operational difficulties into seamless digital workflows.</p>
+      </div>
+      <div style="border: 1px solid var(--border-gold); padding: 2rem; background: var(--obsidian-light);">
+        <div style="height: 4px; width: 40px; background: var(--gold-matte); margin-bottom: 2rem;"></div>
+        <h4 style="margin-bottom: 1rem; color: #fff;">01. Strategy</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Deep analysis of your current business bottlenecks.</p>
+        <h4 style="margin-bottom: 1rem; color: #fff;">02. Engineering</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Modern tech stacks (MERN, Next.js) for speed and security.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="section">
+    <span class="label" style="text-align: center;">Proprietary Ecosystem</span>
+    <h2 style="font-family: 'Syne', sans-serif; font-size: 3rem; text-align: center; margin-bottom: 4rem;">Our Products</h2>
+    
+    <div class="product-stack">
+      
+      <div class="product-card">
+        <div class="product-img">
+          <img src="assets/img/products/naijatimely-mockup.png" alt="Naija Timely Screenshot">
+        </div>
+        <div class="product-info">
+          <span class="label" style="font-size: 0.6rem; color: #2563eb;">Booking & Scheduling</span>
+          <h3>Naija Timely</h3>
+          <p>The premium booking solution for Nigerian service professionals. Protect your time with automated scheduling and deposit management.</p>
+          <a href="https://naijatimely.vercel.app" target="_blank" class="btn" style="background: #2563eb; color: #fff; width: 250px; text-align: center; border-radius: 4px;">Visit Site</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img" style="background: #f0fdfa;">
+          <img src="assets/img/products/fazetedu-mockup.png" alt="Fazet Edu Screenshot">
+        </div>
+        <div class="product-info">
+          <span class="label" style="font-size: 0.6rem; color: #0d9488;">Edutech</span>
+          <h3>Fazet Edu</h3>
+          <p>Comprehensive digital infrastructure for schools. Manage students, results, and fees with a high-end administrative dashboard.</p>
+          <a href="https://fazetedu.vercel.app" target="_blank" class="btn" style="background: #0d9488; color: #fff; width: 250px; text-align: center; border-radius: 4px;">Visit Site</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-flex">
+      <div class="footer-col" style="max-width: 320px;">
+        <a href="/" class="nav-logo">FAZET<span>.</span></a>
+        <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; margin: 1.5rem 0;">
+          Architecting high-performance digital products for the African market.
+        </p>
+        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+           <span style="font-size: 0.7rem; color: var(--gold-matte); letter-spacing: 1px;">LINKEDIN • X • INSTAGRAM</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="https://naijatimely.vercel.app">Naija Timely (SaaS)</a></li>
+          <li><a href="https://fazetedu.vercel.app">Fazet Edu (Edutech)</a></li>
+          <li><a href="/services">Custom Engineering</a></li>
+          <li><a href="/services">AI Consultations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About Fazet</a></li>
+          <li><a href="/about">Our Process</a></li>
+          <li><a href="/team">The Team</a></li>
+          <li><a href="/faq">FAQ & Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul style="margin-bottom: 1.5rem;">
+          <li><a href="mailto:fazetedutechltd@gmail.com">fazetedutechltd@gmail.com</a></li>
+          <li style="color: var(--text-muted); font-size: 0.9rem;">Kano • Abuja • Lagos</li>
+        </ul>
+        <div style="border-bottom: 1px solid var(--border-gold); padding-bottom: 5px; display: flex; justify-content: space-between;">
+           <span style="font-size: 0.7rem; color: var(--text-muted);">Newsletter</span>
+           <span style="font-size: 0.7rem; color: var(--gold-matte);">SUBSCRIBE</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">
+      <span>© 2026 Fazet Edutech Ltd. All Rights Reserved.</span>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="/privacy" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+        <a href="/terms" style="color: inherit; text-decoration: none;">Terms of Service</a>
+        <a href="/portfolio" style="color: inherit; text-decoration: none;">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const cursor = document.querySelector('.cursor');
+    const ring = document.querySelector('.cursor-ring');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+      ring.style.left = e.clientX + 'px';
+      ring.style.top = e.clientY + 'px';
+    });
+
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    document.querySelectorAll('a, .btn, .product-card').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        ring.style.width = '60px';
+        ring.style.height = '60px';
+        ring.style.borderColor = 'var(--gold-glimmer)';
+        ring.style.background = 'rgba(243, 207, 122, 0.05)';
+      });
+      el.addEventListener('mouseleave', () => {
+        ring.style.width = '32px';
+        ring.style.height = '32px';
+        ring.style.borderColor = 'var(--gold-matte)';
+        ring.style.background = 'transparent';
+      });
+    });
+  </script>
+</body>
+</html>

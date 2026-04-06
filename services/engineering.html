@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Engineering | Fazet Tech — High-Performance Infrastructure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --obsidian: #050505;
+      --obsidian-light: #0f0f0f;
+      --gold-glimmer: #f3cf7a;
+      --gold-matte: #d4af37;
+      --border-gold: rgba(212, 175, 55, 0.15);
+      --text-main: #e0e0e0;
+      --text-muted: #a0a0a0;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--obsidian); color: var(--text-main); line-height: 1.6; }
+
+    nav { padding: 1.5rem 8%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-gold); }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: #fff; text-decoration: none; }
+    .nav-logo span { color: var(--gold-matte); }
+    .btn-back { color: var(--text-muted); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+
+    .hero { padding: 6rem 8% 4rem; max-width: 1100px; }
+    .label { color: var(--gold-matte); font-weight: 700; font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1.2rem; display: block; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); color: #fff; line-height: 1.1; margin-bottom: 1.5rem; }
+    .hero-sub { font-size: 1.2rem; color: var(--text-muted); max-width: 750px; }
+
+    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 2rem 8% 6rem; }
+    
+    .service-card { background: var(--obsidian-light); border: 1px solid var(--border-gold); padding: 3rem; border-radius: 4px; transition: 0.4s; position: relative; overflow: hidden; }
+    .service-card:hover { border-color: var(--gold-matte); transform: translateY(-5px); }
+    .service-card h3 { font-family: 'Syne', sans-serif; font-size: 1.6rem; color: #fff; margin-bottom: 1.2rem; }
+    .service-card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 2rem; }
+    
+    .stack-label { font-size: 0.65rem; color: var(--gold-matte); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 0.5rem; }
+    .tech-list { font-size: 0.85rem; color: #fff; font-weight: 500; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem; }
+
+    .cta-section { padding: 6rem 8%; text-align: center; border-top: 1px solid var(--border-gold); }
+    .btn-gold { background: var(--gold-matte); color: var(--obsidian); padding: 1.2rem 3rem; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.8rem; display: inline-block; border-radius: 2px; }
+
+    footer { padding: 4rem 8%; text-align: center; font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border-gold); }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-logo">FAZET<span>.</span></a>
+    <a href="/" class="btn-back">← Back to Home</a>
+  </nav>
+
+  <header class="hero">
+    <span class="label">Building the Machine</span>
+    <h1>Custom Software <br><span style="color: var(--gold-matte);">Engineering Studio.</span></h1>
+    <p class="hero-sub">Robust, type-safe digital infrastructure. From institutional dashboards to scalable booking engines built for the Nigerian market.</p>
+  </header>
+
+  <section class="service-grid">
+    <div class="service-card">
+      <span class="label" style="font-size: 0.6rem;">Pillar 01</span>
+      <h3>Full-Stack Web Apps</h3>
+      <p>Secure, high-traffic applications focused on SEO, performance, and 99.9% uptime.</p>
+      <span class="stack-label">Core Stack</span>
+      <div class="tech-list">Next.js • TypeScript • MongoDB • Node.js</div>
+    </div>
+
+    <div class="service-card">
+      <span class="label" style="font-size: 0.6rem;">Pillar 02</span>
+      <h3>Dashboard Systems</h3>
+      <p>Custom administrative interfaces for schools and businesses. Transform messy manual data into clean visual insights.</p>
+      <span class="stack-label">Core Stack</span>
+      <div class="tech-list">React • Tailwind CSS • Supabase • Prisma</div>
+    </div>
+
+    <div class="service-card">
+      <span class="label" style="font-size: 0.6rem;">Pillar 03</span>
+      <h3>API Integration</h3>
+      <p>Connecting your ecosystem. We build custom APIs and integrate secure payment, SMS, and logistics gateways.</p>
+      <span class="stack-label">Core Stack</span>
+      <div class="tech-list">REST APIs • GraphQL • Paystack • Twilio</div>
+    </div>
+  </section>
+
+  <footer class="cta-section">
+    <a href="https://wa.me/2347082921105" class="btn-gold">Start a Consultation</a>
+    <p style="margin-top: 2rem;">© 2026 Fazet Edutech Ltd.</p>
+  </footer>
+</body>
+</html>

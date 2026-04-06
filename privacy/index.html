@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy & Data Sovereignty | Fazet Tech — Global Standards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --obsidian: #050505;
+      --obsidian-light: #0f0f0f;
+      --gold-glimmer: #f3cf7a;
+      --gold-matte: #d4af37;
+      --border-gold: rgba(212, 175, 55, 0.15);
+      --text-main: #e0e0e0;
+      --text-muted: #a0a0a0;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--obsidian); color: var(--text-main); line-height: 1.8; overflow-x: hidden; }
+
+    /* ── NAVIGATION ── */
+    nav { padding: 1.5rem 8%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-gold); background: var(--obsidian); position: fixed; top: 0; width: 100%; z-index: 100; }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: #fff; text-decoration: none; }
+    .nav-logo span { color: var(--gold-matte); }
+    .btn-back { color: var(--text-muted); text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ── HERO ── */
+    .hero { padding: 8rem 8% 4rem; max-width: 1000px; }
+    .label { color: var(--gold-matte); font-weight: 700; font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1rem; display: block; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 5vw, 3.5rem); color: #fff; line-height: 1.1; margin-bottom: 1.5rem; }
+    .hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 700px; }
+
+    /* ── ACCORDION SECTION ── */
+    .privacy-container { padding: 0 8% 8rem; max-width: 900px; }
+    
+    .accordion-item { background: var(--obsidian-light); border: 1px solid var(--border-gold); margin-bottom: 1rem; border-radius: 2px; overflow: hidden; transition: 0.3s; }
+    .accordion-item:hover { border-color: rgba(212, 175, 55, 0.4); }
+
+    /* The clickable header */
+    .accordion-header { padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+    .accordion-header h3 { font-family: 'Syne', sans-serif; font-size: 1.2rem; color: #fff; font-weight: 700; }
+    .accordion-icon { color: var(--gold-matte); font-size: 1.2rem; transition: transform 0.3s ease; }
+
+    /* The hidden content */
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 2rem; }
+    .accordion-content p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .key-point { font-weight: 700; font-size: 0.75rem; color: var(--gold-glimmer); text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-top: 0.5rem; }
+
+    /* Active State (Expanded) */
+    .accordion-item.active { border-color: var(--gold-matte); box-shadow: 0 0 15px rgba(212, 175, 55, 0.1); }
+    .accordion-item.active .accordion-icon { transform: rotate(180px); color: var(--gold-glimmer); }
+    .accordion-item.active .accordion-content { padding: 1rem 2rem 2rem; /* Restore padding when active */ }
+
+    footer { padding: 4rem 8%; text-align: center; font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border-gold); background: #020202; }
+
+    @media (max-width: 768px) { .hero { padding: 6rem 8% 3rem; } .accordion-header { padding: 1.2rem; } .accordion-header h3 { font-size: 1.1rem; } .accordion-item.active .accordion-content { padding: 1rem 1.2rem 1.5rem; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">FAZET<span>.</span></a>
+    <a href="/" class="btn-back">← Back to Home</a>
+  </nav>
+
+  <header class="hero">
+    <span class="label">Legal Protocol</span>
+    <h1>Privacy & Data Sovereignty</h1>
+    <p class="hero-sub">Your Data. Our Priority. Encrypted to Global Standards.</p>
+  </header>
+
+  <main class="privacy-container">
+    
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <h3>1. Data Collection & Usage</h3>
+        <span class="accordion-icon">▼</span>
+      </div>
+      <div class="accordion-content">
+        <p>We only collect data that is strictly necessary for the functionality of your custom application. Whether it is student records for an Edutech platform or internal documents for a RAG system, we never sell, trade, or leak your proprietary information to third parties.</p>
+        <span class="key-point">✓ Purpose-driven data retention.</span>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <h3>2. AI Data Grounding & Security</h3>
+        <span class="accordion-icon">▼</span>
+      </div>
+      <div class="accordion-content">
+        <p>When implementing AI Automation, your private data remains private. We use secure 'grounding' techniques to ensure that Large Language Models (LLMs) process your information without training on it. Your intellectual property stays within your secure infrastructure.</p>
+        <span class="key-point">✓ No unauthorized AI model training.</span>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <h3>3. Encryption & Storage</h3>
+        <span class="accordion-icon">▼</span>
+      </div>
+      <div class="accordion-content">
+        <p>All data handled by Fazet Tech is encrypted at rest and in transit. We utilize industry-standard protocols (AES-256) and host on secure, globally recognized infrastructure (Vercel, AWS, or Supabase) to ensure 99.9% protection against unauthorized access.</p>
+        <span class="key-point">✓ Bank-grade security for every build.</span>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <h3>4. Client Control & "Forget" Rights</h3>
+        <span class="accordion-icon">▼</span>
+      </div>
+      <div class="accordion-content">
+        <p>We provide our clients with full sovereignty over their data. At any point, you may request a full audit, export, or permanent deletion of your data from our systems. We follow international standards (GDPR/NDPR) to ensure your users are protected.</p>
+        <span class="key-point">✓ Complete data ownership.</span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Fazet Edutech Ltd. — Fully Compliant with NDPR Standards.</p>
+  </footer>
+
+  <script>
+    // Pure JS Accordion Logic
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const content = item.querySelector('.accordion-content');
+        
+        // 1. Close any other open items
+        document.querySelectorAll('.accordion-item').forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('active')) {
+            otherItem.classList.remove('active');
+            otherItem.querySelector('.accordion-content').style.maxHeight = 0;
+          }
+        });
+
+        // 2. Toggle the clicked item
+        item.classList.toggle('active');
+        
+        if (item.classList.contains('active')) {
+          // Set maxHeight to the scrollHeight so it expands to fit content
+          content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+          // Close it
+          content.style.maxHeight = 0;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

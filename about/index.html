@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Fazet Tech — Educator-Turned-Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --obsidian: #050505;
+      --obsidian-light: #0f0f0f;
+      --gold-glimmer: #f3cf7a;
+      --gold-matte: #d4af37;
+      --gold-gradient: linear-gradient(145deg, #f3cf7a 0%, #d4af37 50%, #927521 100%);
+      --text-main: #e0e0e0;
+      --text-muted: #a0a0a0;
+      --border-gold: rgba(212, 175, 55, 0.15);
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--obsidian); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+
+    /* ── NAVIGATION ── */
+    nav { padding: 1.5rem 8%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-gold); }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: #fff; text-decoration: none; }
+    .nav-logo span { color: var(--gold-matte); }
+    .btn-back { color: var(--text-muted); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+    .btn-back:hover { color: var(--gold-glimmer); }
+
+    /* ── HERO ── */
+    .about-hero { padding: 7rem 8% 4rem; max-width: 1000px; }
+    .label { color: var(--gold-matte); font-weight: 700; font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1.2rem; display: block; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 6vw, 4.5rem); color: #fff; line-height: 1; margin-bottom: 2rem; }
+    .hero-sub { font-size: 1.25rem; color: var(--text-muted); max-width: 750px; line-height: 1.7; }
+
+    /* ── THE CORE STORY ── */
+    .story-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; padding: 5rem 8%; border-top: 1px solid var(--border-gold); align-items: start; }
+    
+    .story-text h2 { font-family: 'Syne', sans-serif; font-size: 2rem; color: #fff; margin-bottom: 1.5rem; }
+    .story-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem; max-width: 550px; }
+    
+    .highlight-card { background: var(--obsidian-light); border: 1px solid var(--border-gold); padding: 3rem; position: relative; border-radius: 2px; }
+    .highlight-card::before { content: ""; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--gold-gradient); }
+    .highlight-card h3 { font-family: 'Syne', sans-serif; font-size: 1.6rem; color: #fff; margin-bottom: 1rem; }
+    
+    .proof-line { font-weight: 700; font-size: 0.85rem; letter-spacing: 2px; color: var(--gold-matte); text-transform: uppercase; display: block; margin-top: 2rem; }
+
+    /* ── CAPABILITIES ── */
+    .caps-section { padding: 5rem 8% 8rem; }
+    .caps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; margin-top: 3rem; }
+    .cap-item { border-left: 1px solid var(--border-gold); padding-left: 1.5rem; transition: 0.4s; }
+    .cap-item:hover { border-left: 1px solid var(--gold-matte); }
+    .cap-item span { font-size: 0.7rem; color: var(--gold-matte); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+    .cap-item h4 { font-family: 'Syne', sans-serif; font-size: 1.4rem; color: #fff; margin: 0.5rem 0 1rem; }
+    .cap-item p { font-size: 0.95rem; color: var(--text-muted); }
+
+    footer { padding: 4rem 8%; border-top: 1px solid var(--border-gold); text-align: center; }
+    .footer-text { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 1px; }
+
+    @media (max-width: 900px) {
+      .story-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-hero { padding: 5rem 8% 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">FAZET<span>.</span></a>
+    <a href="/" class="btn-back">← Back to Home</a>
+  </nav>
+
+  <header class="about-hero">
+    <span class="label">The Founder's Edge</span>
+    <h1>Where Pedagogy Meets <br><span style="color: var(--gold-matte);">AI Engineering.</span></h1>
+    <p class="hero-sub">We don't just write code. We architect high-performance digital infrastructure for the Nigerian market, built by people who have lived the problems.</p>
+  </header>
+
+  <section class="story-grid">
+    <div class="story-text">
+      <h2>The Origin</h2>
+      <p>Founded by an educator-turned-engineer. We build Edutech that actually works in Nigerian classrooms — not just software that looks good in a demo.</p>
+      <p>MERN stack mastery. AI Automation next. Self-taught through The Odin Project and Fullstack Open — then proven in production.</p>
+      <span class="proof-line">✓ 2 Products Live • 100% Nigerian Built</span>
+    </div>
+
+    <div class="highlight-card">
+      <span class="label" style="letter-spacing: 2px;">The Mission</span>
+      <h3>Standardize. Automate. Scale.</h3>
+      <p style="color: var(--text-muted); font-size: 1rem;">Replacing manual errors with AI-driven infrastructure. We build for Nigerian businesses and institutions by understanding the workflow firsthand.</p>
+    </div>
+  </section>
+
+  <section class="caps-section">
+    <span class="label">Core Expertise</span>
+    <div class="caps-grid">
+      <div class="cap-item">
+        <span>Engineering</span>
+        <h4>Next.js & TypeScript</h4>
+        <p>Production-grade web applications built for speed, security, and long-term stability.</p>
+      </div>
+      <div class="cap-item">
+        <span>Intelligence</span>
+        <h4>RAG & AI Automation</h4>
+        <p>Leveraging LLMs and fine-tuned data retrieval (RAG) to automate complex business bottlenecks.</p>
+      </div>
+      <div class="cap-item">
+        <span>Specialization</span>
+        <h4>Institutional UX</h4>
+        <p>Interfaces designed specifically for the unique operational reality of Nigerian school administrators.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div style="margin-bottom: 1.5rem;">
+      <a href="/" class="nav-logo" style="font-size: 1.2rem;">FAZET<span>.</span></a>
+    </div>
+    <p class="footer-text">© 2026 Fazet Edutech Ltd. Abuja • Kano • Lagos</p>
+  </footer>
+
+</body>
+</html>

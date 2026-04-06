@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service | Fazet Tech — Professional Agreement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --obsidian: #050505;
+      --obsidian-light: #0f0f0f;
+      --gold-glimmer: #f3cf7a;
+      --gold-matte: #d4af37;
+      --border-gold: rgba(212, 175, 55, 0.15);
+      --text-main: #e0e0e0;
+      --text-muted: #a0a0a0;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--obsidian); color: var(--text-main); line-height: 1.8; overflow-x: hidden; }
+
+    /* ── NAVIGATION ── */
+    nav { padding: 1.5rem 8%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-gold); background: var(--obsidian); position: fixed; top: 0; width: 100%; z-index: 100; }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: #fff; text-decoration: none; }
+    .nav-logo span { color: var(--gold-matte); }
+    .btn-back { color: var(--text-muted); text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ── HERO ── */
+    .hero { padding: 8rem 8% 4rem; max-width: 1000px; }
+    .label { color: var(--gold-matte); font-weight: 700; font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1rem; display: block; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 5vw, 3.5rem); color: #fff; line-height: 1.1; margin-bottom: 1.5rem; }
+    .hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 700px; }
+
+    /* ── ACCORDION SECTION ── */
+    .terms-container { padding: 0 8% 8rem; max-width: 900px; }
+    
+    .accordion-item { background: var(--obsidian-light); border: 1px solid var(--border-gold); margin-bottom: 1rem; border-radius: 2px; overflow: hidden; transition: 0.3s; }
+    .accordion-item:hover { border-color: rgba(212, 175, 55, 0.4); }
+
+    .accordion-header { padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+    .accordion-header h3 { font-family: 'Syne', sans-serif; font-size: 1.2rem; color: #fff; font-weight: 700; }
+    .accordion-icon { color: var(--gold-matte); font-size: 1.2rem; transition: transform 0.3s ease; }
+
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+    .inner-content { padding: 0 2rem 2rem; }
+    .inner-content p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
+    .key-standard { font-weight: 700; font-size: 0.75rem; color: var(--gold-glimmer); text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-top: 1rem; }
+
+    /* Active State */
+    .accordion-item.active { border-color: var(--gold-matte); box-shadow: 0 0 15px rgba(212, 175, 55, 0.05); }
+    .accordion-item.active .accordion-icon { transform: rotate(180deg); }
+
+    footer { padding: 4rem 8%; text-align: center; font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border-gold); background: #020202; }
+
+    @media (max-width: 768px) { .hero { padding: 6rem 8% 3rem; } .accordion-header { padding: 1.2rem; } .inner-content { padding: 0 1.2rem 1.5rem; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">FAZET<span>.</span></a>
+    <a href="/" class="btn-back">← Back to Home</a>
+  </nav>
+
+  <header class="hero">
+    <span class="label">Professional Standards</span>
+    <h1>Terms of <span style="color: var(--gold-matte);">Service.</span></h1>
+    <p class="hero-sub">The legal framework governing our engineering and AI consultation partnerships.</p>
+  </header>
+
+  <main class="terms-container">
+    
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <h3>1. Engagement & Services</h3>
+        <span class="accordion-icon">▼</span>
+      </div>
+      <div class="accordion-content">
+        <div class="inner-content">
+          <p>Fazet Tech provides custom software engineering and AI consultation. All project specifics, timelines, and deliverables are defined in individual Service Agreements signed by both parties. These online terms provide a general framework for our professional conduct.</p>
+          <span class="key-standard">✓ Defined by contract.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <h3>2. Intellectual Property (IP)</h3>
+        <span class="accordion-icon">▼</span>
+      </div>
+      <div class="accordion-content">
+        <div class="inner-content">
+          <p>Unless otherwise stated in a specific contract, all code and architectural designs remain the property of Fazet Tech until full and final payment is received. Upon completion and payment, the client is granted the rights to the production-ready code for their specific use case.</p>
+          <span class="key-standard">✓ Protection of authorship.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <h3>3. AI Output & Liability</h3>
+        <span class="accordion-icon">▼</span>
+      </div>
+      <div class="accordion-content">
+        <div class="inner-content">
+          <p>For AI-driven solutions, Fazet Tech provides the infrastructure and grounding logic. We are not responsible for the specific real-time "outputs" generated by third-party LLMs. We implement RAG to maximize accuracy, but absolute output control is restricted by the nature of generative models.</p>
+          <span class="key-standard">✓ Controlled Intelligence.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <h3>4. Payment & Milestones</h3>
+        <span class="accordion-icon">▼</span>
+      </div>
+      <div class="accordion-content">
+        <div class="inner-content">
+          <p>We operate on a "One Step at a Time" milestone basis. Invoices are issued per completed stage. Work on subsequent stages will only commence once the previous milestone is approved and settled.</p>
+          <span class="key-standard">✓ Milestone-based progress.</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Fazet Edutech Ltd. — Quality in every line of code.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const content = item.querySelector('.accordion-content');
+        
+        // Close others
+        document.querySelectorAll('.accordion-item').forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('active')) {
+            otherItem.classList.remove('active');
+            otherItem.querySelector('.accordion-content').style.maxHeight = 0;
+          }
+        });
+
+        // Toggle self
+        item.classList.toggle('active');
+        if (item.classList.contains('active')) {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+          content.style.maxHeight = 0;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
