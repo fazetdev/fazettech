@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Faruk Bashir Aminu — Founder & Lead Systems Architect at Fazet Edutech Ltd. Specialist in Production AI, Fullstack Engineering, and Systems Logic." />
+  <title>Team | Fazet Edutech — The AI Architect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --obsidian: #050505;
+      --obsidian-light: #0f0f0f;
+      --gold-matte: #d4af37;
+      --border-gold: rgba(212, 175, 55, 0.15);
+      --text-main: #e0e0e0;
+      --text-muted: #a0a0a0;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--obsidian); color: var(--text-main); line-height: 1.6; }
+
+    nav { padding: 1.5rem 8%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-gold); }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: #fff; text-decoration: none; }
+    .nav-logo span { color: var(--gold-matte); }
+    .btn-back { color: var(--text-muted); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+
+    .team-hero { padding: 6rem 8% 3rem; text-align: center; }
+    .team-hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 6vw, 4.5rem); color: #fff; margin-bottom: 1rem; }
+
+    .leader-profile { max-width: 1100px; margin: 0 auto 4rem; padding: 0 8%; display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; }
+    .profile-image-container { border: 1px solid var(--border-gold); padding: 1rem; background: var(--obsidian-light); }
+    .profile-image-container img { width: 100%; height: auto; filter: grayscale(100%); transition: 0.5s; display: block; }
+    .profile-image-container:hover img { filter: grayscale(0%); }
+
+    .profile-details span { color: var(--gold-matte); font-weight: 700; font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; }
+    .profile-details h2 { font-family: 'Syne', sans-serif; font-size: 2.8rem; color: #fff; margin: 0.5rem 0 1.5rem; }
+    .bio { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; }
+
+    .cert-section { padding: 4rem 8%; max-width: 1100px; margin: 0 auto; }
+    .section-label { color: var(--gold-matte); font-weight: 700; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 2rem; display: block; }
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .cert-card { background: var(--obsidian-light); border: 1px solid var(--border-gold); padding: 2rem; border-radius: 2px; height: 100%; }
+    .cert-card h4 { color: #fff; font-family: 'Syne', sans-serif; margin-bottom: 0.7rem; font-size: 1rem; }
+    .cert-card p { font-size: 0.85rem; color: var(--text-muted); }
+
+    .ai-stack-section { padding: 2rem 8% 6rem; max-width: 1100px; margin: 0 auto; }
+    .stack-items { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .stack-tag { border: 1px solid var(--border-gold); padding: 0.6rem 1.4rem; font-size: 0.75rem; color: var(--gold-matte); text-transform: uppercase; letter-spacing: 1px; }
+
+    footer { padding: 4rem 8%; text-align: center; font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border-gold); letter-spacing: 1px; }
+
+    @media (max-width: 850px) { .leader-profile { grid-template-columns: 1fr; } .team-hero { padding: 4rem 8% 2rem; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">FAZET<span>.</span></a>
+    <a href="/" class="btn-back">← Home</a>
+  </nav>
+
+  <header class="team-hero">
+    <h1>The <span style="color: var(--gold-matte);">AI Architect.</span></h1>
+    <p style="color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem;">Systems Logic • Fullstack Engineering • Production AI</p>
+  </header>
+
+  <main>
+    <section class="leader-profile">
+      <div class="profile-image-container">
+        <img src="/assets/img/team/faruk.jpg" alt="Faruk Bashir Aminu">
+      </div>
+      
+      <div class="profile-details">
+        <span>Founder & Lead Systems Architect</span>
+        <h2>Faruk Bashir Aminu</h2>
+        <p class="bio">
+          With a background in <strong>Applied Biology</strong>, I bridge the gap between biological logic and artificial intelligence. My approach is rooted in systems thinking—ensuring every application is as efficient and adaptable as a living organism. 
+          <br><br>
+          Forged through the <strong>University of Helsinki's Fullstack Open</strong> standards and the <strong>GenAI 360</strong> elite track, I specialize in building production-grade AI infrastructure for high-growth businesses.
+        </p>
+      </div>
+    </section>
+
+    <section class="cert-section">
+      <span class="section-label">Engineering Foundation</span>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <h4>GenAI 360 (Activeloop)</h4>
+          <p>Mastery in LangChain, LlamaIndex, Multi-Modal RAG, GraphRAG, and Fine-Tuning LLMs for production.</p>
+        </div>
+        <div class="cert-card">
+          <h4>U. of Helsinki (Fullstack Open)</h4>
+          <p>Certified in advanced deep fullstack development. Focus on React, Node.js, and CI/CD pipelines.</p>
+        </div>
+        <div class="cert-card">
+          <h4>Applied Biology (B.Sc.)</h4>
+          <p>Utilizing scientific methodology for structural logic and complex data systems.</p>
+        </div>
+        <div class="cert-card">
+          <h4>The Odin Project</h4>
+          <p>Foundational mastery in JavaScript architecture and software engineering principles.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-stack-section">
+      <span class="section-label">Production AI Specialization (GenAI 360)</span>
+      <div class="stack-items">
+        <span class="stack-tag">GraphRAG</span>
+        <span class="stack-tag">Multi-Modal RAG</span>
+        <span class="stack-tag">Fine-Tuning LLMs</span>
+        <span class="stack-tag">LlamaIndex</span>
+        <span class="stack-tag">LangChain</span>
+        <span class="stack-tag">RAFT</span>
+        <span class="stack-tag">Vector Intelligence</span>
+        <span class="stack-tag">Deep Lake</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Fazet Edutech Ltd. — Engineered with Scientific Precision.</p>
+  </footer>
+
+</body>
+</html>
