@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ & Support | Fazet Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --obsidian: #050505;
+      --obsidian-light: #0f0f0f;
+      --gold-matte: #d4af37;
+      --border-gold: rgba(212, 175, 55, 0.15);
+      --text-main: #e0e0e0;
+      --text-muted: #a0a0a0;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--obsidian); color: var(--text-main); line-height: 1.6; }
+
+    nav { padding: 1.5rem 8%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-gold); }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: #fff; text-decoration: none; }
+    .nav-logo span { color: var(--gold-matte); }
+    .btn-back { color: var(--text-muted); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+
+    .support-hero { padding: 6rem 8% 4rem; text-align: center; }
+    .support-hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); color: #fff; margin-bottom: 1rem; }
+
+    .faq-container { max-width: 900px; margin: 0 auto 6rem; padding: 0 8%; }
+    .faq-item { border-bottom: 1px solid var(--border-gold); padding: 2rem 0; }
+    .faq-question { font-family: 'Syne', sans-serif; font-size: 1.2rem; color: #fff; margin-bottom: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { color: var(--text-muted); font-size: 1rem; max-width: 800px; }
+
+    .support-options { padding: 4rem 8%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto 6rem; }
+    .support-card { background: var(--obsidian-light); border: 1px solid var(--border-gold); padding: 2.5rem; text-align: center; }
+    .support-card h3 { font-family: 'Syne', sans-serif; color: #fff; margin-bottom: 1rem; }
+    .support-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+    .support-link { color: var(--gold-matte); text-decoration: none; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+
+    footer { padding: 4rem 8%; text-align: center; font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border-gold); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">FAZET<span>.</span></a>
+    <a href="/" class="btn-back">← Home</a>
+  </nav>
+
+  <header class="support-hero">
+    <h1>Support & <span style="color: var(--gold-matte);">FAQ.</span></h1>
+    <p style="color: var(--text-muted);">How can we help you architect your success?</p>
+  </header>
+
+  <main>
+    <section class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">What kind of businesses do you work with?</div>
+        <div class="faq-answer">We specialize in high-growth startups, educational institutions (via Fazet Edu), and service professionals (via Naija Timely). Our focus is on clients who need custom, scalable AI and software infrastructure rather than generic templates.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How long does a typical custom project take?</div>
+        <div class="faq-answer">MVPs and custom dashboards typically take 4–8 weeks depending on complexity. Our "One Step at a Time" methodology ensures we deliver functional milestones every 2 weeks.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What is your tech stack?</div>
+        <div class="faq-answer">We use production-grade technologies: Next.js, React, Node.js, and TypeScript. For AI, we leverage LangChain, LlamaIndex, and advanced RAG architectures.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do you offer post-launch support?</div>
+        <div class="faq-answer">Yes. All our custom builds come with 3 months of priority technical support and performance monitoring to ensure a seamless transition.</div>
+      </div>
+    </section>
+
+    <section class="support-options">
+      <div class="support-card">
+        <h3>Technical Support</h3>
+        <p>Existing client? Get direct assistance with your dashboard or application.</p>
+        <a href="mailto:fazetedutechltd@gmail.com" class="support-link">Email Support →</a>
+      </div>
+      <div class="support-card">
+        <h3>Consultation</h3>
+        <p>Ready to build? Schedule a strategy session to discuss your AI or web needs.</p>
+        <a href="https://wa.me/2347082921105" class="support-link">WhatsApp Strategist →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Fazet Edutech Ltd. — Empowering Digital Growth.</p>
+  </footer>
+
+</body>
+</html>
