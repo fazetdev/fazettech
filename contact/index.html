@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Fazet Edutech — Engineering Consultation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --obsidian: #050505;
+      --obsidian-light: #0f0f0f;
+      --gold-matte: #d4af37;
+      --border-gold: rgba(212, 175, 55, 0.15);
+      --text-main: #e0e0e0;
+      --text-muted: #a0a0a0;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--obsidian); color: var(--text-main); line-height: 1.6; }
+
+    nav { padding: 1.5rem 8%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-gold); }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: #fff; text-decoration: none; }
+    .nav-logo span { color: var(--gold-matte); }
+    .btn-back { color: var(--text-muted); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+
+    .contact-hero { padding: 6rem 8% 3rem; text-align: center; }
+    .contact-hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); color: #fff; margin-bottom: 1rem; }
+
+    .contact-grid { max-width: 1100px; margin: 0 auto 6rem; padding: 0 8%; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+    
+    .contact-info h2 { font-family: 'Syne', sans-serif; font-size: 2rem; color: #fff; margin-bottom: 1.5rem; }
+    .contact-info p { color: var(--text-muted); margin-bottom: 2.5rem; }
+    
+    .contact-method { margin-bottom: 2rem; }
+    .method-label { color: var(--gold-matte); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 0.5rem; }
+    .method-value { font-size: 1.1rem; color: #fff; text-decoration: none; }
+    .method-value:hover { color: var(--gold-matte); }
+
+    .contact-form { background: var(--obsidian-light); border: 1px solid var(--border-gold); padding: 3rem; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.5rem; }
+    .form-group input, .form-group textarea { 
+      width: 100%; background: #1a1a1a; border: 1px solid #333; padding: 1rem; color: #fff; font-family: 'DM Sans', sans-serif; 
+    }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--gold-matte); outline: none; }
+    .btn-submit { 
+      width: 100%; background: var(--gold-matte); color: var(--obsidian); border: none; padding: 1.2rem; 
+      font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; transition: 0.3s;
+    }
+    .btn-submit:hover { opacity: 0.9; }
+
+    footer { padding: 4rem 8%; text-align: center; font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border-gold); }
+
+    @media (max-width: 850px) { .contact-grid { grid-template-columns: 1fr; gap: 3rem; } .contact-form { padding: 2rem; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">FAZET<span>.</span></a>
+    <a href="/" class="btn-back">← Home</a>
+  </nav>
+
+  <header class="contact-hero">
+    <h1>Let's <span style="color: var(--gold-matte);">Build.</span></h1>
+    <p style="color: var(--text-muted);">Secure your spot for a technical consultation.</p>
+  </header>
+
+  <main class="contact-grid">
+    <div class="contact-info">
+      <h2>Global Solutions, <br>Local Expertise.</h2>
+      <p>Whether you are looking to integrate AI into your school management or launch a new SaaS product, we provide the architectural foundation you need.</p>
+      
+      <div class="contact-method">
+        <span class="method-label">Email Enquiries</span>
+        <a href="mailto:fazetedutechltd@gmail.com" class="method-value">fazetedutechltd@gmail.com</a>
+      </div>
+
+      <div class="contact-method">
+        <span class="method-label">Direct WhatsApp</span>
+        <a href="https://wa.me/2347082921105" class="method-value">+234 708 292 1105</a>
+      </div>
+
+      <div class="contact-method">
+        <span class="method-label">Head Office</span>
+        <p class="method-value" style="font-size: 0.95rem; line-height: 1.5;">
+          No. 279 Kankarofi KMC Head Office<br>
+          No. 35 Medile Turba Kumbotso<br>
+          Kano, Nigeria
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <form action="https://formspree.io/f/YOUR_ID" method="POST">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" name="name" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="email" required placeholder="john@company.com">
+        </div>
+        <div class="form-group">
+          <label>Project Type</label>
+          <input type="text" name="subject" placeholder="e.g. AI Implementation, School Web Portal">
+        </div>
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea name="message" rows="5" required placeholder="Briefly describe your requirements..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Fazet Edutech Ltd. — Engineered with Scientific Precision.</p>
+  </footer>
+
+</body>
+</html>
