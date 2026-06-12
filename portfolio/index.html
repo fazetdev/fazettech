@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Fazet Edutech Ltd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --obsidian: #050505;
+      --obsidian-light: #0f0f0f;
+      --gold-glimmer: #f3cf7a;
+      --gold-matte: #d4af37;
+      --gold-deep: #927521;
+      --gold-gradient: linear-gradient(145deg, #f3cf7a 0%, #d4af37 50%, #927521 100%);
+      --text-main: #e0e0e0;
+      --text-muted: #a0a0a0;
+      --border-gold: rgba(212, 175, 55, 0.2);
+      --glass-obsidian: rgba(15, 15, 15, 0.8);
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--obsidian); color: var(--text-main); overflow-x: hidden; cursor: none; }
+
+    /* ── CUSTOM CURSOR ── */
+    .cursor { width: 6px; height: 6px; background: var(--gold-glimmer); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); }
+    .cursor-ring { width: 32px; height: 32px; border: 1px solid var(--gold-matte); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: all 0.15s ease-out; }
+
+    /* ── NAVIGATION ── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 8%; display: flex; align-items: center; justify-content: space-between; transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1); background: var(--glass-obsidian); backdrop-filter: blur(25px); border-bottom: 1px solid var(--border-gold); }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.6rem; color: #fff; text-decoration: none; letter-spacing: -0.5px; }
+    .nav-logo span { color: var(--gold-matte); }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.85rem; font-weight: 500; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-links a:hover { color: var(--gold-glimmer); }
+    .nav-links a.active { color: var(--gold-matte); }
+
+    /* ── PORTFOLIO HERO ── */
+    .portfolio-hero { padding: 12rem 8% 5rem; text-align: center; background-image: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%); }
+    .portfolio-hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); color: #fff; margin-bottom: 1rem; }
+    .portfolio-hero p { color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7; }
+
+    /* ── PROJECT CARDS ── */
+    .projects-section { padding: 2rem 8% 8rem; }
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem; max-width: 1400px; margin: 0 auto; }
+    .project-card { background: var(--obsidian-light); border: 1px solid var(--border-gold); border-radius: 8px; overflow: hidden; transition: 0.4s; }
+    .project-card:hover { transform: translateY(-8px); border-color: rgba(212, 175, 55, 0.4); }
+    .project-img { height: 280px; background: #0a0a0a; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-gold); }
+    .project-img img { max-width: 80%; max-height: 80%; object-fit: contain; }
+    .project-info { padding: 2rem; }
+    .project-status { display: inline-block; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; padding: 0.25rem 0.75rem; border-radius: 20px; margin-bottom: 1rem; }
+    .status-active { background: rgba(212, 175, 55, 0.15); color: var(--gold-matte); border: 1px solid var(--border-gold); }
+    .status-wip { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+    .project-info h2 { font-family: 'Syne', sans-serif; font-size: 1.8rem; margin-bottom: 1rem; color: #fff; }
+    .project-tech { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+    .tech-tag { background: rgba(255,255,255,0.05); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.7rem; color: var(--text-muted); }
+    .project-info p { color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    .feature-list { margin: 1rem 0 1.5rem; padding-left: 1.2rem; color: var(--text-muted); font-size: 0.9rem; }
+    .feature-list li { margin-bottom: 0.4rem; }
+    .project-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--gold-matte); text-decoration: none; font-weight: 500; font-size: 0.85rem; letter-spacing: 1px; transition: 0.3s; }
+    .project-link:hover { gap: 0.8rem; color: var(--gold-glimmer); }
+
+    /* ── FOOTER ── */
+    footer { padding: 4rem 8% 3rem; border-top: 1px solid var(--border-gold); background: #020202; margin-top: 2rem; }
+    .footer-flex { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 3rem; margin-bottom: 3rem; }
+    .footer-col h4 { font-family: 'Syne', sans-serif; margin-bottom: 1.2rem; color: #fff; font-size: 0.9rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.6rem; }
+    .footer-col a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+    .footer-col a:hover { color: var(--gold-matte); }
+    .copyright { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.7rem; color: var(--text-muted); }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .project-grid { grid-template-columns: 1fr; }
+      .portfolio-hero { padding: 8rem 5% 3rem; }
+      .projects-section { padding: 2rem 5% 5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+
+  <nav>
+    <a href="/" class="nav-logo">FAZET<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/portfolio" class="active">Portfolio</a></li>
+      <li><a href="/team">Team</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <a href="/contact" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.7rem; background: var(--gold-gradient); color: var(--obsidian); border-radius: 2px; text-decoration: none; font-weight: 700;">Hire Us</a>
+  </nav>
+
+  <section class="portfolio-hero">
+    <h1>Our <span style="color: var(--gold-matte);">Work</span></h1>
+    <p>Real solutions built for real problems. From AI assistants to smart form builders — we turn ideas into functional products.</p>
+  </section>
+
+  <section class="projects-section">
+    <div class="project-grid">
+
+      <!-- Project 1: Fazet Voice (AI Assistant / RAG Chatbot) -->
+      <div class="project-card">
+        <div class="project-img">
+          <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" stroke="var(--gold-matte)" stroke-width="1.5" stroke-dasharray="4 4"/>
+            <path d="M35 45 L45 55 L65 35" stroke="var(--gold-glimmer)" stroke-width="2" fill="none"/>
+            <rect x="40" y="60" width="20" height="12" rx="2" stroke="var(--gold-matte)" stroke-width="1.5" fill="none"/>
+            <path d="M45 72 L45 78 M55 72 L55 78" stroke="var(--text-muted)" stroke-width="1.5"/>
+            <path d="M30 40 L30 50 M70 40 L70 50 M50 30 L50 38" stroke="var(--gold-matte)" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <div class="project-info">
+          <span class="project-status status-wip">⚡ WORK IN PROGRESS</span>
+          <h2>Fazet Voice</h2>
+          <div class="project-tech">
+            <span class="tech-tag">RAG</span>
+            <span class="tech-tag">Voice AI</span>
+            <span class="tech-tag">OpenAI/Gemini</span>
+            <span class="tech-tag">PDF Processing</span>
+            <span class="tech-tag">Next.js</span>
+          </div>
+          <p>An intelligent voice assistant that answers questions from your documents. Upload PDFs, text files, or paste content — ask questions via voice or text and get accurate RAG-powered answers.</p>
+          <ul class="feature-list">
+            <li>🗣️ Voice input + text response</li>
+            <li>📄 PDF, TXT, and document upload</li>
+            <li>🔍 Full RAG pipeline (retrieval + generation)</li>
+            <li>💬 Chat history & context memory</li>
+            <li>🌐 Web demo ready for testing</li>
+          </ul>
+          <a href="#" class="project-link" onclick="alert('Demo coming soon — contact us for early access'); return false;">🔮 REQUEST EARLY ACCESS →</a>
+        </div>
+      </div>
+
+      <!-- Project 2: Fazet Forms (Smart Form Builder) -->
+      <div class="project-card">
+        <div class="project-img">
+          <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="25" width="60" height="50" rx="4" stroke="var(--gold-matte)" stroke-width="1.5" fill="none"/>
+            <line x1="30" y1="38" x2="70" y2="38" stroke="var(--gold-glimmer)" stroke-width="1.5"/>
+            <line x1="30" y1="48" x2="70" y2="48" stroke="var(--text-muted)" stroke-width="1"/>
+            <line x1="30" y1="55" x2="55" y2="55" stroke="var(--text-muted)" stroke-width="1"/>
+            <circle cx="75" cy="60" r="12" stroke="var(--gold-matte)" stroke-width="1.5"/>
+            <path d="M72 60 L74 62 L78 57" stroke="var(--gold-glimmer)" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <div class="project-info">
+          <span class="project-status status-active">✅ LIVE — MVP READY</span>
+          <h2>Fazet Forms</h2>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Drag & Drop</span>
+            <span class="tech-tag">Google Sheets</span>
+            <span class="tech-tag">Email Automation</span>
+          </div>
+          <p>A no-code form builder for Nigerian businesses. Create contact forms, surveys, lead capture pages, and job applications — all with automatic email notifications and spreadsheet sync.</p>
+          <ul class="feature-list">
+            <li>📱 Drag-drop form builder</li>
+            <li>📧 Auto-email submissions to you</li>
+            <li>📊 Sync responses to Google Sheets</li>
+            <li>🔗 Embed anywhere with one line of code</li>
+            <li>📈 Basic analytics & submission tracking</li>
+          </ul>
+          <a href="#" class="project-link" onclick="alert('Launching soon — get notified when live'); return false;">🚀 VIEW DEMO →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-flex">
+      <div class="footer-col" style="max-width: 300px;">
+        <a href="/" class="nav-logo">FAZET<span>.</span></a>
+        <p style="color: var(--text-muted); font-size: 0.8rem; line-height: 1.6; margin: 1rem 0;">Building digital products that matter for the African market.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:fazetedutechltd@gmail.com">fazetedutechltd@gmail.com</a></li>
+          <li><a href="https://x.com/Fazettech">X (Twitter)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Fazet Edutech Ltd. All rights reserved.</span>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="/privacy" style="color: inherit; text-decoration: none;">Privacy</a>
+        <a href="/terms" style="color: inherit; text-decoration: none;">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const cursor = document.querySelector('.cursor');
+    const ring = document.querySelector('.cursor-ring');
+    if (cursor && ring) {
+      document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        ring.style.left = e.clientX + 'px';
+        ring.style.top = e.clientY + 'px';
+      });
+    }
+  </script>
+</body>
+</html>
